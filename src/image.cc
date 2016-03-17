@@ -83,6 +83,10 @@ void *Image::GetData () {
 void Image::Load (const char *filename) {
   this->filename = (char *)filename;
 
+  if (image_bmp) {
+    FreeImage_Unload(image_bmp);
+  }
+
   FREE_IMAGE_FORMAT format = FreeImage_GetFileType(filename, 0);
   FIBITMAP *tmp = FreeImage_Load(format, filename, 0);
   image_bmp = FreeImage_ConvertTo32Bits(tmp);
