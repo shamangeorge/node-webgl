@@ -6,9 +6,6 @@ var WebGL=require('../index'),
     document = WebGL.document(),
     requestAnimationFrame = document.requestAnimationFrame;
 
-document.setTitle("Traveling Wavefronts");
-document.setIcon(__dirname+"/wavefront_icon.png");
-
 var shaders = {
     "shader-vs": [
       "attribute vec3 aPos;",
@@ -208,7 +205,10 @@ var shaders = {
     clearInterval(timer);
     var canvas = document.createElement("canvas");
     gl = canvas.getContext("experimental-webgl");
-
+    
+    document.setTitle("Traveling Wavefronts");
+    document.setIcon(__dirname+"/wavefront_icon.png");
+      
     if (!gl) {
       alert("Your browser does not support WebGL");
       return;
