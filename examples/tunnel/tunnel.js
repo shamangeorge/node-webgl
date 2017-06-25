@@ -15,7 +15,6 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/glUtils.js','utf8'));
 }
 
-document.setTitle("Tunnel");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var shaders= {
@@ -368,7 +367,7 @@ function handleLoadedTexture(texture) {
 
 function webGLStart() {
   var canvas = document.createElement("canvas",800,600);
-
+  document.setTitle("Tunnel");
   initGL(canvas);
 
   document.on("resize", function (evt) {
