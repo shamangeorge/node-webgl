@@ -6,7 +6,6 @@ if (nodejs) {
   alert = log = console.log;
 }
 
-document.setTitle("ShaderToy");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var vsSource = [ 
@@ -199,6 +198,7 @@ var mMouseOriX=-1, mMouseOriY=-1, mMousePosX=-1, mMousePosY=-1;
 
 function initGL() {
   mCanvas = document.createElement("canvas",512,512);
+  document.setTitle("ShaderToy");
   try {
     mGLContext = mCanvas.getContext("experimental-webgl");
   } catch (e) {
