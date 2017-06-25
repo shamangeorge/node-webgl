@@ -10,12 +10,12 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 }
 
-document.setTitle("Raytracing");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var angleX = 30;
 var angleY = 10;
 var gl = GL.create();
+document.setTitle("Raytracing");
 var mesh = GL.Mesh.plane();
 var shader = new GL.Shader('\
   uniform vec3 ray00;\

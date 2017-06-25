@@ -12,7 +12,6 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/csg.min.js','utf8'));
 }
 
-document.setTitle("CSG");
 requestAnimationFrame = document.requestAnimationFrame;
 
 // Set the color of all polygons in this solid
@@ -53,6 +52,7 @@ function Viewer(csg, width, height, depth) {
 
   // Get a new WebGL canvas
   var gl = GL.create();
+  document.setTitle("CSG");
   this.gl = gl;
   this.mesh = csg.toMesh();
 

@@ -11,11 +11,11 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 }
 
-document.setTitle("Normal matrix");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var time = 0;
 var gl = GL.create();
+document.setTitle("Normal matrix");
 var mesh = GL.Mesh.sphere({ normals: true });
 var badShader = new GL.Shader('\
   varying vec3 normal;\

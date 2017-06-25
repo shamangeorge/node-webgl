@@ -10,7 +10,6 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 }
 
-document.setTitle("Immediate mode");
 requestAnimationFrame = document.requestAnimationFrame;
 
 //Read and eval library
@@ -19,6 +18,7 @@ eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 
 var angle = 0;
 var gl = GL.create();
+document.setTitle("Immediate mode");
 
 gl.onupdate = function(seconds) {
   angle += 45 * seconds;

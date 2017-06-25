@@ -12,11 +12,11 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/gazebo.js','utf8'));
 }
 
-document.setTitle("Render to texture");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var angle = 0;
 var gl = GL.create();
+document.setTitle("Render to texture");
 var mesh = GL.Mesh.load(gazebo);
 var plane = GL.Mesh.plane({ coords: true });
 var texture = GL.Texture.fromURL(__dirname+'/'+'texture.png');

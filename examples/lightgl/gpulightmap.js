@@ -25,7 +25,6 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 }
 
-document.setTitle("GPU light map");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var angleX = 30;
@@ -37,6 +36,7 @@ var gl = GL.create({
   // avoided by using centroid sampling except it isn't supported by WebGL.
   antialias: false
 });
+document.setTitle("GPU light map");
 if (!(gl.getExtension('GL_ARB_texture_float') || gl.getExtension('OES_texture_float'))) {
   alert('This demo requires the OES_texture_float or GL_ARB_texture_float extension to run');
   throw 'not supported';
