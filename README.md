@@ -14,7 +14,7 @@ Installation
 ============
 `npm install node-webgl`
 
-###Installation Notes for Windows 7
+### Installation Notes for Windows 7
 Beware of the Node.JS distribution you use. The default Node.JS is 32-bit and this means that modules 
 will be compiled by node-gyp with 32-bit settings, which often leads to compilation errors especially
 on 64-bit systems.
@@ -22,7 +22,7 @@ on 64-bit systems.
 So for Windows 7 64-bit, instead of downloading the default Node.JS windows installer, select 'Other release files'.
 This will show you an ftp site for the latest release. Go into x64 folder and download that distribution.
 
-###Installation Notes for OSX
+### Installation Notes for OSX
 `brew install anttweakbar freeimage`
 
 Usage
@@ -30,7 +30,7 @@ Usage
 examples/   contains examples from other the web
 test/       contains lessons from www.learningwebgl.com and other tests
 
-simply type: node test/lesson02.js
+simply type: `node test/lesson02.js`
 
 Enjoy!
 
@@ -43,21 +43,21 @@ to learn about the differences.
 
 - shaders
 Remember to add this on top of your fragment shaders:
-<pre>
+```glsl
 #ifdef GL_ES
 precision highp float;
 #endif
-</pre>
+```
 
 - loading external scripts
 If your code uses external libraries, you can load them like this. No code change to external scripts ;-)
-<pre>
+```js
 fs=require('fs');
 eval(fs.readFileSync(__dirname+ '/glMatrix-0.9.5.min.js','utf8'));
-</pre>
+```
 
 - frame rate
-requestAnimationFrame(callback [, delay]) works as in the browser. 
+`requestAnimationFrame(callback [, delay])` works as in the browser. 
 If delay is specified, it is the requested delay in milliseconds between animation frames 
 e.g. 16 will provide 1000 / 16 = 62 fps at best, which is the default value if delay is undefined. 
 If delay = 0, then the fastest possible framerate on your machine is used.
