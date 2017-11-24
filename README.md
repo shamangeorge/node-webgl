@@ -1,8 +1,13 @@
-This is a Node.JS port of WebGL for desktops: windows, linux, mac
+This is a set of WebGL like bindings to OpenGL for Node.JS for desktops: windows, linux, mac
 
 It started as an extension of creationix/node-webgl and their great example com.creationix.minimason that 
 you can find in examples/wavefront.js. However, it is now quite different and support different platform 
 bindings, mainly GLFW instead of SDL.
+
+Unlike WebGL it calls directly into the OpenGL driver. This has the benefit of speed and 
+access to many features of desktop OpenGL at the expensive of compatibily and security. 
+If you're looking for an actual WebGL implementation for Node.JS see 
+[headless-gl](https://github.com/stackgl/headless-gl).
 
 Dependencies
 ============
