@@ -10,12 +10,12 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 }
 
-document.setTitle("Camera");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var angleX = -35;
 var angleY = 45;
 var gl = GL.create();
+document.setTitle("Camera");
 var camera = new GL.Vector(5, 5, 5);
 var mesh = GL.Mesh.sphere({ normals: true, radius: 4 }).computeWireframe();
 var shader = new GL.Shader('\

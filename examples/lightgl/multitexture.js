@@ -11,11 +11,11 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 }
 
-document.setTitle("Multitexture");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var angle = 0;
 var gl = GL.create();
+document.setTitle("Multitexture");
 var mesh = GL.Mesh.plane({ coords: true });
 var texture = GL.Texture.fromURL(__dirname+'/'+'texture.png');
 var texture2 = GL.Texture.fromURL(__dirname+'/'+'texture2.png');

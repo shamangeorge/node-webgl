@@ -14,7 +14,6 @@ if(nodejs) {
 
 }
 
-document.setTitle("Shadow mapping");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var time = 0;
@@ -22,6 +21,7 @@ var angleX = 20;
 var angleY = 20;
 var useBoundingSphere = false;
 var gl = GL.create();
+document.setTitle("Shadow mapping");
 var mesh = GL.Mesh.load(eval(mesh_name));
 var cube = GL.Mesh.cube().computeWireframe();
 var sphere = GL.Mesh.sphere({ detail: 3 }).computeWireframe();
@@ -249,7 +249,7 @@ gl.ondraw = function() {
     shadowMapMatrix: shadowMapMatrix.multiply(gl.projectionMatrix.multiply(gl.modelviewMatrix).inverse()),
     light: gl.modelviewMatrix.transformPoint(light)
   }).draw(mesh);
-  
+
   // Draw plane
   gl.pushMatrix();
   gl.rotate(-90, 1, 0, 0);

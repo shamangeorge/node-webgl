@@ -11,10 +11,10 @@ if(nodejs) {
   eval(fs.readFileSync(__dirname+ '/lightgl.js','utf8'));
 }
 
-document.setTitle("Scene manipulation");
 requestAnimationFrame = document.requestAnimationFrame;
 
 var gl = GL.create();
+document.setTitle("Scene manipulation");
 var angleX = 30;
 var angleY = 45;
 var mesh = GL.Mesh.cube({ normals: true });
