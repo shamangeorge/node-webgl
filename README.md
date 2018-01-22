@@ -11,7 +11,7 @@ If you're looking for an actual WebGL implementation for Node.JS see
 
 Dependencies
 ============
-- node-glfw, which depends on GLEW, GLFW as well as AntTweakBar. See node-glfw for installation instructions.
+- node-glfw, which depends on GLEW, GLFW as well as AntTweakBar. See [node-glfw](https://github.com/mikeseven/node-glfw) for installation instructions.
 - freeimage is used to load/save a variety of image formats.
 - node-gyp if not already available in your distribution
 
